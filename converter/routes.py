@@ -89,8 +89,3 @@ def download_and_delete():
 @app.route("/instruction")
 def instructionView():
     return render_template("instruction.html")
-
-
-@app.route("/contact")
-def contactView():
-    return render_template("contact.html")
