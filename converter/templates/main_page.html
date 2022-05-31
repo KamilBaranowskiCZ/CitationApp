@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 {% block main %}
 <body>
-  <h1>This is a page that serves to fill in citations in scientific texts on the basis of literature database in excel file</h1>
+  <h1>This is a page that serves to fill in citations in scientific texts (in docx format) on the basis of literature database in excel file(in xlsx format)</h1>
   <div class="container">
   <form action="http://localhost:5000/" method="POST" enctype="multipart/form-data">
     <input type="file" id="word" name="word" />
-    <label class="label1" for="word">
-      <span class="material-icons">file_upload</span>
+    <label class="label1" id="label1" for="word">
+      <span class="material-icons"></span>
       Select a word file:
     </label>  
     <input type="file" id="excel" name="excel" />
-    <label class="label2" for="excel">
-      <span class="material-icons">file_upload</span>
+    <label class="label2" id="label2" for="excel">
+      <span class="material-icons"></span>
       Select a excel file:
     </label> 
     <button class="submitButton"><input type="submit">Convert</button>

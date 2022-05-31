@@ -5,6 +5,7 @@
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -19,5 +20,6 @@
 {% block main %}
 {% endblock %}
 </body>
+<script type="text/javascript" src="{{ url_for('static', filename='script.js')}}"></script>
 </html> 
  
