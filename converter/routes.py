@@ -38,10 +38,6 @@ def allowed_file_xlsx(filename):
         and filename.rsplit(".", 1)[1].lower() in ALLOWED_EXTENSIONS_FOR_XLSX
     )
 
-# @app.route("/home")
-# @app.route("/")
-# def homeView():
-#     return render_template("main_page.html")
 
 @app.route("/")
 def homeView():
@@ -55,7 +51,7 @@ def upload_files():
         return redirect(request.url)
     word_file = request.files["word"]
     excel_file = request.files["excel"]
-    if word_file.filename == "":
+    if word_file.filename == "" or excel_file.filename == "":
         flash("No files selected for uploading")
         return redirect(request.url)
     if excel_file and allowed_file_xlsx(excel_file.filename) and word_file and allowed_file_docx(word_file.filename):
