@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class="logo" src="static/logo.png" alt="logo" width = "95" height = "75">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="{{ url_for('homeView') }}">Converter</a></li>
+            <li><a href="{{ url_for('instructionView') }}">Instruction</a></li>
+            <li><a href="{{ url_for('contactView') }}">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+{% block main %}
+{% endblock %}
+</body>
+</html> 
+ 
